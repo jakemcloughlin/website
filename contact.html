@@ -1,53 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="a website">
-    <meta name="keywords" content="section,footer">
-    <link rel="stylesheet" href="styles/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contact page">
+<meta name="keywords" content="contact">
+<link rel="stylesheet" href="styles/styles.css">
+<title>Contact</title>
 </head>
 
 <body>
-    <!-- Header section -->
-      
-    <header>
-       <!--inline styling for image to the logo-->
-       <img style ="float:left; margin-right:5px;" src="images/newspaper logo.jpg" alt="Logo" class="logo" height="90px" width="100px">
-        <h1 id="main-title">The daily news</h1>
-        
-       
-    </header>
-    <nav>
-        <ul>   <!--unordered list -->
-               <li> <a href="index.html"> home </a></li> <!-- list-->
-               <li> <a href= "history.html">  history  </a></li> <!-- list-->
-              <li id="active"> <a href="contact.html"> contact </a></li>
-        </ul>
-    </nav>
-    <main>
-        <h2>Contact Us</h2>
+<div id="top"></div>  
 
-    <form>
-        First Name:<br>
-        <input type="text"><br><br>
+<header>
+<img src="images/newspaper logo.jpg" alt="logo" width="90" style="float:left;">
+<h1>The Daily News</h1>
+<button onclick="toggleTheme()" class="theme-btn">Light/Dark Mode</button>
+</header>
 
-        Last Name:<br>
-        <input type="text"><br><br>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="history.html">History</a></li>
+<li id="active"><a href="contact.html">Contact</a></li>
+<li><a href="about.html">about</a></li>
+<a href="#top">Top</a>
+<a href="#bottom">Bottom</a>
+</ul>
+</nav>
 
-        Email:<br>
-        <input type="email"><br><br>
+<main>
 
-        Message:<br>
-        <textarea rows="5" cols="40"></textarea><br><br>
+<div class="card">
 
-        <input type="submit" value="Submit">
-    </form>
-    </main>
-  <footer>
-     <p>&copy; this is a school project </p>
-    </footer>
-    </body>
+<h2>Contact Us</h2>
+
+<form action="http://foo.com" method="get">
+
+<label>Name *</label><br>
+<input type="text" name="name" required><br><br>
+
+<label>Email *</label><br>
+<input type="email" name="email" required><br><br>
+
+<label>Message *</label><br>
+<textarea name="message" required></textarea><br><br>
+
+<input type="submit">
+
+</form>
+
+<div class="card">
+<h2>Map</h2>
+
+<iframe
+width="100%"
+height="300"
+style="border:0"
+loading="lazy"
+allowfullscreen
+referrerpolicy="no-referrer-when-downgrade"
+src="https://www.google.com/maps?q=Dublin, Ireland&output=embed">
+</iframe>
+
+</div>
+
+</main>
+
+<footer>
+<p>&copy; 2026 Student Project</p>
+<p><a href="https://www.bbc.com/news" target="_blank">BBC News</a></p>
+</footer>
+
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("light-mode");
+}
+</script>
+<footer id="bottom"></footer>
+</body>
 </html>
-            
